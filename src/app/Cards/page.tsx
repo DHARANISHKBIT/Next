@@ -6,7 +6,7 @@ export default function Page() {
   
   const { store } = useTrend();
 
-  console.log(store);
+  // console.log(store);
 
   return (
     <div className="flex flex-wrap justify-center items-center gap-4">
@@ -18,9 +18,9 @@ export default function Page() {
           duration={item.duration}
           day={item.day}
           can={item.can}
-          circle={item.circle}
           skillgap={item.skillgap}
           per={item.per}
+          img={item.img}
         />
       ))}
     </div>

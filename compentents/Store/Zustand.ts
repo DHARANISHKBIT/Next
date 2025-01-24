@@ -7,7 +7,6 @@ type StoreItem = {
   duration: string;
   day: string;
   can: string;
-  circle: string;
   skillgap: string;
   per: string;
 };
@@ -16,7 +15,7 @@ type TrendStore = {
   store: StoreItem[];
 };
 
-const useTrend = create<TrendStore>((set) => ({
+const useTrend = create((set) => ({
   store: [
     {
       title: "React.js",
@@ -24,19 +23,19 @@ const useTrend = create<TrendStore>((set) => ({
       duration: "90 Days",
       day: "4 hrs / day",
       can: "40 Candidates",
-      circle: "/path-to-circle-icon.svg",
       skillgap: "35%",
       per: "30-35%",
+      // img:'',
     },
     // {
-    //   title: "React.js",
-    //   des: "Learn to build dynamic web applications using React.js, focusing on component-based architecture and interactive user interfaces.",
+    //   title: "Next.js",
+    //   des: "Learn to build dynamic web applications using Next.js, focusing on component-based architecture and interactive user interfaces.",
     //   duration: "90 Days",
     //   day: "4 hrs / day",
     //   can: "40 Candidates",
-    //   circle: "/path-to-circle-icon.svg",
     //   skillgap: "35%",
     //   per: "30-35%",
+    //   img:"",
     // },
   ],
 }));

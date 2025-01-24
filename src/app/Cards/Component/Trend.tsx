@@ -1,12 +1,12 @@
 "use client";
 import CalComponent from "../../../../assests/cal";
-import SvgComponent from "../../../../assests/react";
 import ColComponent from "../../../../assests/Clock";
 import BookComponent from "../../../../assests/book";
 import CirComponent from "../../../../assests/circle";
 import UpArrow from "../../../../assests/uparrow";
-import icon from "../../../../assests/icon.png";
 import { CourseIcon } from "./Course";
+import React from "react";
+import ReactIcon from "../../../../assests/react";
 
 interface Props {
   title: string;
@@ -14,7 +14,6 @@ interface Props {
   duration: string;
   day: string;
   can: string;
-  circle: string;
   skillgap: string;
   per: string;
 }
@@ -27,6 +26,7 @@ export default function Trend({
   can,
   skillgap,
   per,
+
 }: Props) {
     const icon = require("../../../../assests/icon.png");
   return (
@@ -35,16 +35,16 @@ export default function Trend({
         <div className="w-[388px] h-[180px]">
         <CourseIcon src={icon} />
         </div>
-        <div className="w-full mt-2 px-3">
+        <div className="w-full mt-3 px-3">
           <div className="flex justify-between items-center">
             <div className="text-lg font-bold">{title}</div>
             <div className="w-6 h-6">
-              <SvgComponent />
+              <ReactIcon/>
             </div>
           </div>
           <div className="text-xs font-normal mt-2">{des}</div>
 
-          <div className="flex text-sm justify-between mt-2 w-[320px]">
+          <div className="flex text-sm justify-between mt-3 w-[320px]">
           <div className="flex w-[79px] h-[24px] justify-between">
               <div className="w-[24px] h-[24px] text-sm">
                 <CalComponent />
@@ -67,23 +67,20 @@ export default function Trend({
         </div>
       </div>
       <div className="flex h-[51px] items-center justify-between">
-        <div className="text-sm font-normal px-3">Customizable</div>
+        <div className="text-sm font-normal px-4">Customizable</div>
         <div className="w-[234px] flex justify-evenly mr-2">
-          <div className="flex w-[140px] justify-evenly gap-1">
+          <div className="flex w-[140px] justify-evenly gap-1   ">
             <div className="w-[27.88px] h-[27.88px]">
               <CirComponent />
             </div>
             <div className="text-sm mt-1">
-              SkillGap: <span className="text-sm">{skillgap}</span>
+              SkillGap: <span className="text-sm font-bold">{skillgap}</span>
             </div>
-            {/* <div
-              className="h-[6px] w-[6px] rounded-xl mt-3"
-              style={{ backgroundColor: "#CDD7E1" }}
-            ></div> */}
-            <div className="h-[6px] w-[6px] rounded-xl mt-3  ml-1 bg-gray-400"></div>
+           
           </div>
+            <div className="h-[6px] w-[6px] rounded-xl mt-3  ml-1 bg-gray-400"></div>
           <div
-            className="rounded-xl h-[24px] w-[76px] flex justify-evenly text-sm items-center mt-0 ml-3 "
+            className="rounded-xl h-[24px] w-[76px] flex justify-evenly text-sm items-center mt-0.5 ml-3 "
             style={{ backgroundColor: "#D5F0D5" }}
           >
             <UpArrow />
