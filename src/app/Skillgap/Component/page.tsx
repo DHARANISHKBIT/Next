@@ -1,21 +1,34 @@
 "use client"
+
+import { cn } from "@heroui/theme";
+
 interface props {
   sort:string;
   tittle:string;
   emp:string;
-  col:string
+  col:string;
+  bgcolor:string;
+  textcolor:string;
+    
 }
 export default function Card({
   sort,
   tittle,
   emp,
-  col
+  bgcolor,
+  textcolor
 }: props) {
   return (
     <div className="flex items-center p-4">
-      <div className={`w-[40px] h-[40px] rounded-full flex items-center justify-center text-black font-bold mr-4 text-sm bg-gray-300 `}>
-        {sort}
-      </div>
+      <div
+    className={cn(
+      bgcolor,
+      textcolor,
+      "w-[40px] h-[40px] rounded-full flex items-center justify-center font-bold mr-4 text-sm border-1" 
+    )}
+  >
+    {sort}
+  </div>
       <div className="flex flex-col">
         <div className="text-lg font-semibold">{tittle}</div>
 

@@ -1,3 +1,4 @@
+import { ImTextColor } from "react-icons/im";
 import {create} from "zustand"
 
 type  StoreItem = {
@@ -6,7 +7,12 @@ type  StoreItem = {
     emp:string;
     pro:number;
     color:string[],
-    col:string
+    col:string,
+    key:number;
+    num:string;
+    bgcolor:string;
+    textcolor:string
+
 }
 
 type GapStore = {
@@ -16,11 +22,14 @@ type GapStore = {
 const Usegap = create((set) => ({
    store : [
     {
+        key:5,
+        num:"5 / Pages",
         sort:"FD",
         tittle:"Front-end Developer",
         emp:"2.6 Employees",
         pro:80,
-        col: "bg-[col: bg-[#0B6BCB]",
+        bgcolor: "bg-[#EDF5FD)]",
+        textcolor:"text-[#0B6BCB]",
         color:[ "bg-gray-500", 
             "bg-red-500", 
             "bg-orange-500",
@@ -34,11 +43,12 @@ const Usegap = create((set) => ({
             "bg-red-500",]
     },
     {
+        key:10,
+        num:"10 / Pages",
         sort:"BD",
         tittle:"Back-end Developer",
         emp:"1.3 Employees",
         pro:80,
-        col: "bg-[col: bg-[#65686F]",
         color:[ "bg-gray-500", 
             "bg-red-500", 
             "bg-orange-500",
@@ -52,11 +62,14 @@ const Usegap = create((set) => ({
             "bg-red-500",]
     },
     {
+        key:15,
+        num:"15 / Pages",
         sort:"fD",
         tittle:"Full-stack developer",
         emp:"360 Employees",
         pro:75,
-        col: "bg-[col: bg-[#FF7014]",
+        bgcolor: "bg-[#EDF5FD)]",
+        textcolor:"text-[#65686F]",
         color:[ "bg-gray-500", 
             "bg-red-500", 
             "bg-orange-500",
@@ -70,16 +83,25 @@ const Usegap = create((set) => ({
             "bg-red-500",]
     },
     {
+        key:20,
+        num:"20 / Pages",
         sort:"WD",
         tittle:"Web developer",
         emp:"2K Employees",
         pro:80,
-        col: "bg-[#EB6A6A]",
+        bgcolor: "bg-[#EDF5FD)]",
+        textcolor:"text-[#0B6BCB]",
         color:[ "bg-gray-500", 
             "bg-red-500", 
             "bg-orange-500",
             "bg-green-500", 
             "bg-red-500", 
+            "bg-orange-500",
+            "bg-green-500",
+            "bg-red-500",
+            "bg-orange-500",
+            "bg-green-500",
+            "bg-red-500",
             "bg-orange-500",
             "bg-green-500",
             "bg-red-500",
