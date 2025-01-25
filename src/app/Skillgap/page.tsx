@@ -76,8 +76,12 @@ export default function Page() {
         </div>
         <div className="flex  ">
           <div className="flex">
-            <Pagination
-
+            <Pagination classNames={{
+              cursor: "bg-white border-3 border-gray-400 text-black",
+              item:"bg-white",
+              prev:"bg-white border-3 rounded-full ",
+              next:"bg-white  border-3 rounded-full"
+            }}
               showControls
               initialPage={currentPage}
               total={totalPages}
