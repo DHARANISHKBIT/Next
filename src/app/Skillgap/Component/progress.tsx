@@ -18,7 +18,6 @@ interface props {
 
 export default function ProgressBar({pro,color}:props) {
   const maxVisibleColors = 13;
-  const extraColorsCount = color.length - maxVisibleColors;
  
     return (
      <div className="flex items-center">
