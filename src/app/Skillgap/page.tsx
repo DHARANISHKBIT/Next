@@ -19,7 +19,6 @@ export default function Page() {
   }
   const totalPages = Math.ceil(store.length / select);
 
-
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
   };
@@ -30,7 +29,7 @@ export default function Page() {
 
 
   return (
-    <div className="flex-col flex justify-center items-center">
+    <div className="flex-col flex justify-center items-center p-5">
       <div className="text-xl font-bold flex justify-center mt-6">Skill gap by job profile</div>
       <div className="h-[650px]">
         <div className="w-[761px]  border-2 flex-col justify-center mt-6 rounded-md pl-2 pr-2">
@@ -84,10 +83,9 @@ export default function Page() {
             }}
               showControls
               initialPage={currentPage}
-              total={totalPages}
+              total={totalPages} 
               onChange={handlePageChange}
             />
-
           </div>
         </div>
       </div>

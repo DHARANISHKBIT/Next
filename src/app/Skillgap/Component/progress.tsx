@@ -22,7 +22,7 @@ export default function ProgressBar({pro,color}:props) {
     return (
      <div className="flex items-center">
          <div className="flex items-center h-[24px]  border-2 border-gray-300 rounded-lg">
-         <div className={` font-normal text-sm border-2 border-gray-300 px-1 rounded-l-md `}
+         <div className={` font-normal text-sm border-2 border-gray-300 px-1 rounded-l-md bg-[#EDF1F5]`}
 >
           {pro}%
         </div> 

@@ -8,14 +8,12 @@ interface props {
   textcolor: string;
 }
 
-
 export default function Card({
   sort,
   tittle,
   emp,
   textcolor
 }: props) {
-
 
   const bgcolors = (textcolor: string) => {
     switch (textcolor) {
@@ -33,7 +31,7 @@ export default function Card({
     }
   }
   return (
-    <div className="flex items-center p-4">
+    <div className="flex items-center p-4 ">
       <div
         style={{ backgroundColor: bgcolors(textcolor), color: textcolor }}
         className='w-[40px] h-[40px] rounded-full flex items-center justify-center font-bold mr-4 text-sm border-1'
